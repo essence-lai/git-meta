@@ -1,38 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  display: flex; 
+  position: relative;
+  width: 100vw;
   min-height: 100vh;
-  display: flex;
+  background: #FFFFFF;
+  overflow: auto;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+.sidebar {
+  position: relative;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  width: 37%; 
+  min-height: 100vh; 
+  right: 0;
+  top: 0px;
+  background: #37374A;
+  overflow: auto; 
 }
 
-.App-link {
-  color: #61dafb;
+.searchbar {
+  position: relative;
+  width: 80%;
+  margin: 80px auto 40px auto;
+  background: #FFFFFF;
+  border-radius: 4px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  color: #8383AF;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.searchbar input {
+  display: block;
+  width: 100%;
+  height: 60px;
+  font-size: 16px;
+  padding-left: 20px;
+  padding-right: 50px;
+}
+
+.searchbar button {
+  position: absolute;
+  right: 0;
+  padding-right: 20px;
+  top: 0;
+  height: 100%;
+  border: none;
+  background: none;
+}
+
+.graph {
+  position: relative;
+  width: 63%;
+  min-height: 100%; 
+  left: 0;
+}
+
+.graph-layout {
+  position: absolute;
+  width: 785px;
+  height: 0px;
+  left: 32px;
+  top: 71px;
+  border: 3px solid #37374A;
+  transform: rotate(90deg);
+}
+
+.lines-horizontal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 119px;
+  position: absolute;
+  width: 714px;
+  height: 11px;
+  left: 111px;
+  top: 846px;
+}
+
+.lines-horizontal .line {
+  width: 11px;
+  height: 0px;
+  border: 3px solid #37374A;
+  transform: rotate(-90deg);
+}
+
+.lines-vertical {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 160px;
+  position: absolute;
+  width: 640px;
+  height: 11px;
+  left: 32px;
+  top: 780px;
+  transform: rotate(-90deg);
+}
+
+.lines-vertical .line {
+  width: 11px;
+  height: 0px;
+  border: 3px solid #37374A;
+  transform: rotate(180deg);
+}
+
+.empty-state-message {
+  position: absolute;
+  width: 473px;
+  height: 236px;
+  left: 935px;
+  top: 156px;
+}
+
+.empty-state-message .rectangle {
+  position: absolute;
+  width: 473px;
+  height: 208px;
+  left: 935px;
+  top: 156px;
+  background: #242432;
+  border-radius: 16px;
+}
+
+.empty-state-message .message {
+  position: absolute;
+  width: 338px;
+  height: 192px;
+  left: 1002px;
+  top: 200px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #BCBCF2;
+}
+
+.searchbar {
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  font-size: 16px;
+  background-color: white;
+  max-height: 324px; 
+  overflow-y: auto;
+  width: 100%;
+  z-index: 2;
+}
+
+.dropdownitem {
+  margin: 8px 0;
+  padding: 10px 20px; 
+  text-align: left;
+}
+
+.owner-login {
+  color: #8383AF;
+}
+
+.repo-name {
+  color: #37374A;
+}
+
+.repo-card {
+  width: 98%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  background-color: #2d2d3f; /* Darker shade of #37374A */
+  border-radius: 4px;
+}
+
+.repo-card-background{
+  display: flex;
+  justify-content: flex-end; 
+  width: 80%;
+  margin: auto auto 20px auto;
+  align-items: center;
+  height: 80px;
+  border-radius: 4px;
+}
+
+.repo-info {
+  padding: 20px;
+  width: 100%;
+}
+
+.repo-info h2 {
+  margin: 0;
+  font-size: 16px;
+  color: #fff;
+}
+
+.repo-info p {
+  margin: 0;
+  font-size: 14px;
+  width: 100%;
+}
+
+.empty-repo-cards {
+  text-align: center;
+  width: 80%;
+  height: 208px;
+  margin: auto;
+  flex-direction: column; 
+  background-color: #242432;
+  color: #BCBCF2;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  border-radius: 4px;
+}
+
+.empty-repo-cards .search-icon {
+  font-size: 200px;
+}
+
+.empty-repo-cards h2 {
+  margin: 0;
+  padding: 10px;
+}
+
+.card-owner {
+  color: #BFBDD9;
+  white-space: nowrap;
+
+}
+
+.card-name {
+  color: #fff;
+}
+
+.repo-details {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.delete-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  opacity: 0;
+  padding-right: 20px;
+  transition: opacity 0.3s ease;
+}
+
+.repo-card:hover .delete-button {
+  opacity: 1;
+}
+
+.repo-list:hover .repo-card-background{
+  opacity: 0.5;
+}
+
+.repo-list:hover .repo-card-background:hover {
+  opacity: 1;
 }
