@@ -65,12 +65,12 @@ function App() {
 
   return (
     <div className="App">
-      <div className="graph">
+      <div className="graph" data-testid="graph">
         <Graph savedRepos={savedRepos} hoveredRepoId={hoveredRepoId} />
       </div>
       <div className="sidebar">
-        <SearchBar fetchCommitActivity={fetchCommitActivity} />
-        <div className="repo-list">
+        <SearchBar fetchCommitActivity={fetchCommitActivity}/>
+        <div className="repo-list" data-testid="repo-list">
           {savedRepos.length > 0 ? (
             savedRepos.map(repo => (
               <RepoCard repo={repo} deleteRepo={deleteRepo} setHoveredRepoId={setHoveredRepoId} />

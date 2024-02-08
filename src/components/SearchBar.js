@@ -20,7 +20,6 @@ const SearchBar = ({ fetchCommitActivity }) => {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
       const data = await response.json();
-      console.log(data)
       setRepos(data.items);
       setDropdownVisible(true);
     } catch (error) {
@@ -42,7 +41,7 @@ const SearchBar = ({ fetchCommitActivity }) => {
   }, [searchBarRef]);
 
   return (
-    <div className="searchbar" ref={searchBarRef}>
+    <div className="searchbar" ref={searchBarRef} data-testid="searchbar">
       <input
         type="text"
         value={input}
