@@ -8,6 +8,13 @@ const SearchBar = ({ fetchCommitActivity }) => {
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const searchBarRef = useRef(null);
 
+  const handleInput = async (event) => {
+    setInput(event.target.value);
+
+    if (event.target.value.length > 2) {
+      await search();
+    }
+  };
 
   const search = async () => {
     try {
@@ -45,6 +52,7 @@ const SearchBar = ({ fetchCommitActivity }) => {
       <input
         type="text"
         value={input}
+        onInput={handleInput}
         onChange={e => setInput(e.target.value)}
         placeholder="Search a Github Repository..."
       />
