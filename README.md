@@ -28,6 +28,8 @@ Questions? [`@essence-lai`](https://github.com/essence-lai)
 | Netlify | :---:| [Netlify](https://app.netlify.com/sites/metalab-github-elai/overview)|
 | Runbook | :---: | [**RUNBOOK**.md](docs/RUNBOOK.md)|
 | Contributing | :---: | [**CONTRIBUTING**.md](docs/CONTRIBUTING.md)|
+| PRE_ASSIGNMENT_ANSWERS | :---:| [**PRE_ASSIGNMENT_ANSWERS**.md](docs/PRE_ASSIGNMENT_ANSWERS.md)|
+| POST_ASSIGNMENT_ANSWERS | :---:| [**POST_ASSIGNMENT_ANSWERS**.md](docs/POST_ASSIGNMENT_ANSWERS.md)|
 
 
 # Overview
