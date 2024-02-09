@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+<h1 align="center"> MetaLab Github Tool</h1>
+<div align="center">
+This React project efficiently searches public github repositories and return a graph view of their commits in the past year grouped by weeks. The Graph can be zoomed in and scrolled to see a closer or more broad breakdown of commits count.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<br/>
 
-## Available Scripts
+[![CircleCI](https://dl.circleci.com/status-badge/img/circleci/9coiYMfcHu1ERt5ztmp4sB/4x6zVRYEHhPTdAnng8VoAq/tree/main.svg?style=svg&circle-token=329a7f5a4a0fc351c7f3d6211cb4f6091af80d0a)](https://dl.circleci.com/status-badge/redirect/circleci/9coiYMfcHu1ERt5ztmp4sB/4x6zVRYEHhPTdAnng8VoAq/tree/main)
 
-In the project directory, you can run:
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8ea497fa-0636-4762-929c-1a6ca56e5583/deploy-status)](https://app.netlify.com/sites/metalab-github-elai/deploys)
 
-### `yarn start`
+Questions? [`@essence-lai`](https://github.com/essence-lai)
+<br/>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+</div>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Table of Contents
+- [Table of Contents](#table-of-contents)
+- [Quick Links](#quick-links)
+- [Overview](#overview)
+- [Useful Resources](#useful-resources)
+- [Future Upgrades](#future-upgrades)
 
-### `yarn test`
+# Quick links
+| Resource | Dev-pr | Prod |
+| :---: | :---: | :---: |
+| Interface | :---:| [MetaLab Github Tool](https://metalab-github-elai.netlify.app/)|
+| CircleCi | [All branches](https://app.circleci.com/pipelines/circleci/9coiYMfcHu1ERt5ztmp4sB/4x6zVRYEHhPTdAnng8VoAq)| [Main](https://app.circleci.com/pipelines/circleci/9coiYMfcHu1ERt5ztmp4sB/4x6zVRYEHhPTdAnng8VoAq?branch=main)|
+| Netlify | :---:| [Netlify](https://app.netlify.com/sites/metalab-github-elai/overview)|
+| Runbook | :---: | [**RUNBOOK**.md](docs/RUNBOOK.md)|
+| Contributing | :---: | [**CONTRIBUTING**.md](docs/CONTRIBUTING.md)|
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+# Overview
+    This project provides an interactive platform for users to explore GitHub repositories. Users can search for repositories by name and add them to a dynamic graph. This graph visualizes a year's worth of commit activity, broken down into 52 data points, each representing a week's worth of commits. For enhanced user experience, hovering over the graph highlights the corresponding repository's line, and users have the option to remove any repository from the graph as desired.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Useful resources
+* [FIGMA PROJECT](https://www.figma.com/file/LkoKul35uIyrtwJMZq5Ruj/Dev-Test-design?node-id=0%3A1)
+* [Feather Icons](https://feathericons.com/)
+* [GITHUB API](https://docs.github.com/en/rest?apiVersion=2022-11-28)
+* [Netlify](https://docs.netlify.com/)
+* [Circlci](https://circleci.com/docs/getting-started/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Future upgrades
+* Full Coverage Unit Tests
+* Upgrade api call times with a Redis cache to store previous responses
+* Add Logging with Splunk and Monitoring with Newrelic
